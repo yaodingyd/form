@@ -4,7 +4,8 @@
   "description": "A project featuring validation, form-buiding or possible virtual-dom.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "deploy": "gh-pages -d ./"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "css-loader": "^0.26.1",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.12.0",
     "jquery": "^3.1.1",
     "style-loader": "^0.13.1"
   }
