@@ -1,0 +1,127 @@
+[
+	{
+		"id": "firstName",
+		"rules": "required|name|maxLength[35]",
+		"messages": {
+			"required": "First Name is required",
+			"name": "Invalid First Name. Valid Characters(a-z,.,' ',',^,-).",
+			"maxLength": "First Name cannot be greater than 35 characters."
+		}
+	},
+	{
+		"id": "lastName",
+		"rules": "required|name|minLength[5]",
+		"messages": {
+			"required": "Last Name is required",
+			"name": "Invalid Last Name. Valid Characters(a-z,.,' ',',^,-).",
+			"minLength": "Last Name cannot be greater than 35 characters."
+		}
+	},
+  {
+		"id": "middleName",
+		"rules": "required|name|minLength[5]",
+		"messages": {
+			"required": "Last Name is required",
+			"name": "Invalid Last Name. Valid Characters(a-z,.,' ',',^,-).",
+			"minLength": "Middle Name cannot be less than 5 characters."
+		}
+	},
+	{
+		"id": "password", 
+		"hint": "5 character minimum. No punctuation.",
+		"hintExample": "example: Jared031",
+		"rules": "required|password|minLength[5]",
+		"messages": {
+			"required": "Supplying a password is required.",
+			"password": "We can't accept the password you entered. Your password must have at least 5 characters and limited to A - Z, 0 - 9.",
+			"minLength": "Your Password must contain at least 5 characters. Please choose another password."
+		}
+	},
+	{
+		"id": "confirmPassword",
+		"hint": "Please confirm your password by typing it again.",
+		"rules": "required|match[password]",
+		"messages": {
+			"required": "Password confirmation is required.",
+			"match": "Your passwords do not match. Please try again."
+		}
+	},
+	{
+		"id": "email",
+		"hint": "Enter a valid email address that can be used to communicate with you about your membership.",
+		"hintExample": "janedoe@email.com",
+		"rules": "required|email|unique",
+		"messages": {
+			"required": "Supplying your email address is required.",
+			"email": "The email address you supplied is not a valid email address. Please try again.",
+			"unique": "The email address you entered is already in use.  If this email address is yours, please use the following links to <a href='https://profreg.medscape.com/px/accounts/forgotusername'>retrieve your username</a> or <a href='https://profreg.medscape.com/px/accounts/forgotpassword'>reset your password</a>."
+		}
+	},
+	{
+		"id": "profession",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting a profession is required."
+		}
+	},
+	{
+		"id": "country",
+		"hint": "This information helps us tailor content to your region.",
+		"rules": "required",
+		"messages": {
+			"required": "Supplying your country of residence is required."
+		}
+	},
+	{
+		"id": "zipcode",
+		"rules": "required|minLength[5]|maxLength[5]|zipcode",
+		"messages": {
+			"required": "Supplying a zip or postal code is required.",
+			"minLength": "ZipCode cannot be less than 5 characters.",
+			"maxLength": "ZipCode cannot be greater than 5 characters.",
+			"zipcode": "The zip code you supplied is not valid. Please try again."
+		}
+	},
+	{
+		"id": "degree",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting a degree is required."
+		}
+	},
+	{
+		"id": "occupation",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting your occupation is required."
+		}
+	},
+	{
+		"id": "medSchool",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting your medical school is required."
+		}
+	},
+	{
+		"id": "medSchoolLocation",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting your medical school location is required."
+		}
+	},
+	{
+		"id": "specialty",
+		"rules": "required",
+		"messages": {
+			"required": "Selecting a primary area of practice is required."
+		}
+	}	
+]
+
+
+
+
+
+
+

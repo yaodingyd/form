@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta lang="en">
+    <meta charset="utf-8">
+    <meta title="Form validation and building demo">
+    <script src='assets/bundle.js'></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="container">
+        <h1>Form Validation and Building by JSON</h1>
+        <p class="lead">A Demo page to show form validation and building on the fly using JSON send by backend.</p>
+        <a href="https://github.com/yaodingyd/form/">
+        <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
+          <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <div class="container">
+      <h3>Build</h3>
+      <p>Building takes object like following specify form attributes like action, and fields inside form.</p>
+      <pre>
+        <code>
+{
+  "action": "index.html",
+  "method": "post",
+  "fieldsets": [{
+    "name": "About You",
+    "id": "about",
+    "fields": [
+    {
+      "type": "text",
+      "name": "firstName",
+      "id": "firstName",
+      "caption": "First Name",
+      "placeholder": "John",
+      "class": "first-name"
+    }]
+  }]
+}
+        </code>
+      </pre>
+      <h3>Validate</h3>
+      <p>Validate takes an array of to-be-validated items and initialize rules and add event listeners to elements.</p>
+      <p>The object must contains an id(DOM id to append event listeners), rules which can be pipelined. You can include customed message for each rule, if not there are default messages.</p>
+      <pre>
+        <code>
+[{
+  "id": "firstName",
+  "rules": "required|name|maxLength[35]",
+  "messages": {
+    "required": "First Name is required",
+    "name": "Invalid First Name."
+  }
+}]
+
+var formValidation = new validate('myform', validation[0]);
+        </code>
+      </pre>
+      <p>The default classname for error message is <code>error-message</code>. Additionally you can add a hint, that would display when the input field is focused, and the default class name is <code>hint</code>.</p>
+
+      <h3>Update form</h3>
+      <p>Both validate and build can be updated with new data.Validate would check each cached field and add/remove based whether it's on DOM. Build has a naive Virtual DOM implementation that would only change what is different in each fieldset, thus preserving the exsiting inputs.</p>
+      
+      <h3>Example</h3>
+      <p>Click this button to build a form. Notice that if you select a different country, the first name and last name would preserve.</p>
+      <button type="button" class="btn btn-info" id="demo">Click me!</button>
+      <form id="myform"></form>
+    </div>
+    <footer class="footer">
+      <p>Website theme from <a href="http://wtfforms.com/">WTF, Form</a></p>
+      <p>Made by Yao Ding</p>
+    </footer>
+  </body>
+    
+</html>    

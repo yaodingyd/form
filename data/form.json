@@ -1,0 +1,73 @@
+{
+	"action": "index.html",
+	"method": "post",
+	"fieldsets": 
+	[
+		{
+			"name": "About You",
+      "id": "about",
+			"fields": 
+			[
+				{
+					"type": "text",
+					"name": "firstName",
+					"id": "firstName",
+					"caption": "First Name",
+					"placeholder": "John",
+					"class": "first-name"
+				},
+				{
+					"type": "text",
+					"name": "lastName",
+					"id": "lastName",
+					"caption": "Last Name",
+					"placeholder": "Doe"
+				},
+				{
+					"type": "select",
+					"name": "country",
+					"id": "country",
+					"caption": "Country",
+					"options": [
+						{
+							"text": "Choose a country"
+						},
+						{
+							"text": "United States",
+							"value": "us"
+						},
+						{
+							"text": "Canada",
+							"value": "ca"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Your Medscape Acount",
+      "id": "account",
+			"fields":
+			[
+				{
+					"type": "text",
+					"name": "email",
+					"id": "email",
+					"caption": "Email"
+				},
+				{
+					"type": "password",
+					"name": "password",
+					"id": "password",
+					"caption": "Password"
+				},
+				{
+					"type": "password",
+					"name": "confirmPassword",
+					"id": "confirmPassword",
+					"caption": "Confirm Password"
+				}
+			]
+		}
+	]
+}

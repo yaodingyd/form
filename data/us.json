@@ -1,0 +1,53 @@
+{
+	"fieldsets": 
+	[
+		{
+			"name": "About You",
+      "id": "about",
+			"fields": 
+			[
+				{
+					"type": "text",
+					"name": "firstName",
+					"id": "firstName",
+					"caption": "First Name",
+					"placeholder": "John",
+					"class": "first-name"
+				},
+				{
+					"type": "text",
+					"name": "lastName",
+					"id": "lastName",
+					"caption": "Last Name",
+					"placeholder": "Doe"
+				},
+        {
+					"type": "text",
+					"name": "middleName",
+					"id": "middleName",
+					"caption": "Middle Name",
+					"placeholder": "X"
+				},
+				{
+					"type": "select",
+					"name": "country",
+					"id": "country",
+					"caption": "Country",
+					"options": [
+						{
+							"text": "Choose a country"
+						},
+						{
+							"text": "United States",
+							"value": "us"
+						},
+						{
+							"text": "Canada",
+							"value": "ca"
+						}
+					]
+				}
+			]
+    }
+	]
+}
