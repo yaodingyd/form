@@ -102,7 +102,7 @@
     
 	v._addHint = function(field) {
 		if (field.hint !== undefined) {
-			var hint = $('<div class="hint">' + field.hint + '</div>');
+			var hint = $('<div class="hint alert alert-info">' + field.hint + '</div>');
 			field.element.after(hint);
 			hint.hide();
 			field.element.on('focus', function(){
@@ -160,7 +160,7 @@
     
   v._updateError = function (field) {
     if(!field.errorElement) {
-      field.element.after('<div class="error-message"></div>');
+      field.element.after('<div class="error-message alert alert-danger"></div>');
       field.errorElement = field.element.siblings('.error-message');
       field.errorElement.parent().css('position', 'relative');
     }
